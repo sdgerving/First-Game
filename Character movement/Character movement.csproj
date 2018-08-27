@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F5E5A233-85E9-43BA-91AE-925BF75016B4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Character_movement</RootNamespace>
+    <AssemblyName>Character movement</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="combat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="combat.Designer.cs">
+      <DependentUpon>combat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dungeon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dungeon.Designer.cs">
+      <DependentUpon>Dungeon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="combat.resx">
+      <DependentUpon>combat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dungeon.resx">
+      <DependentUpon>Dungeon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\walkdown1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\walkdown2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\walkdown3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\walkleft1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\walkleft2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\walkleft3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\walkright1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\walkright2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\walkright3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\walkup1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\walkup2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\walkup3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Floor_trial34.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\horzontalwall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\verticalwall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Character_movement\Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fourwall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\horzleftcap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\horzrightcap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vertbottomcap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\verttopcap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tchestrt1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tchestrt2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tchestrt3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tchestrt4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stairsdown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Engine\Engine.csproj">
+      <Project>{bc9aa6c8-baf0-4ec2-bc1e-ee37b86dca89}</Project>
+      <Name>Engine</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Snake.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Spider.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
